@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webz.io News API Showcase</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Webz.io News API Showcase</h1>
+        <div class="row mb-4">
+            <div class="col-md-6 col-lg-4">
+                <label for="category">Select Category:</label>
+                <select id="category" class="form-control">
+                    <option value="financial_news">Financial News</option>
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="political_news">Political News</option>
+                    <!-- Add other categories here -->
+                </select>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <label for="sentiment">Select Sentiment:</label>
+                <select id="sentiment" class="form-control">
+                    <option value="positive">Positive</option>
+                    <option value="negative">Negative</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <button id="fetchNewsBtn" class="btn btn-primary btn-block">Fetch News</button>
+            </div>
+        </div>
+        <div id="newsArticles" class="row">
+            <!-- Fetched news articles will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add custom JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>

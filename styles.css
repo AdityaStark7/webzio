@@ -1,0 +1,66 @@
+
+@keyframes twinkling {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000;
+}
+
+.stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    animation: twinkling 4s infinite;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.row > div {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    margin-bottom: 0.5rem;
+}
+
+/* Adjust spacing for smaller screens */
+@media (max-width: 767px) {
+    .row > div {
+        margin-bottom: 10px;
+    }
+    .card {
+        padding: 10px;
+    }
+}
